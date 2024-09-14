@@ -1,0 +1,9 @@
+.select2-container .select2-selection {
+    height: 60px;
+    overflow: auto;
+}
+
+.select2-container-multi .select2-choices {
+    height: 60px;
+    overflow: auto;
+}
