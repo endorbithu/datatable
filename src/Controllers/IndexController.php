@@ -1,10 +1,10 @@
 <?php
 
-namespace DelocalZrt\Datatable\Controllers;
+namespace Endorbit\Datatable\Controllers;
 
 use App\Models\User;
-use DelocalZrt\Datatable\Models\DatatableUser;
-use DelocalZrt\Datatable\Services\Datatable;
+use Endorbit\Datatable\Models\DatatableUser;
+use Endorbit\Datatable\Services\Datatable;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Support\Facades\Redirect;

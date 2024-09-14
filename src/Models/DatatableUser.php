@@ -1,6 +1,6 @@
 <?php
 
-namespace DelocalZrt\Datatable\Models;
+namespace Endorbit\Datatable\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;

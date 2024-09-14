@@ -1,9 +1,9 @@
 <?php
 
-namespace DelocalZrt\Datatable\Jobs;
+namespace Endorbit\Datatable\Jobs;
 
-use DelocalZrt\Datatable\Models\DatatableUser;
-use DelocalZrt\Datatable\Services\Datatable;
+use Endorbit\Datatable\Models\DatatableUser;
+use Endorbit\Datatable\Services\Datatable;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldBeUnique;
 use Illuminate\Contracts\Queue\ShouldQueue;

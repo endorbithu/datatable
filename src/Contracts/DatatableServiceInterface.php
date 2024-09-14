@@ -6,7 +6,7 @@
  * Time: 15:19
  */
 
-namespace DelocalZrt\Datatable\Contracts;
+namespace Endorbit\Datatable\Contracts;
 
 
 use Illuminate\Database\Eloquent\Model;

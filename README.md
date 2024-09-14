@@ -7,12 +7,12 @@ Ha submodulként telepítettük, akkor a composer.json-ben fel kell tüntetni pa
 ``` 
  "require": {
         (...)
-        "delocalzrt/datatable": "*"
+        "endorbithu/datatable": "*"
     },
 "repositories": [
         {
             "type":"path",
-            "url": "./app_delocalzrt/datatable"
+            "url": "./app_endorbithu/datatable"
         }
     ]
 ```
@@ -22,20 +22,20 @@ aztán `composer update`
 
 https://app.repman.io/ (belépés szükséges)
 
-- delocalzrt organization-nél kell másolni a composer config parancsot
+- endorbithu organization-nél kell másolni a composer config parancsot
 - és a project laravel root mappájában futtatni:
 
 ```
-composer config --global --auth http-basic.delocalzrt.repo.repman.io token 2640e..........
+composer config --global --auth http-basic.endorbithu.repo.repman.io token 2640e..........
 ```
 
-Laravel root `composer.json`-nál ha még nincs, akkor be kell állítani a `delocalzrt` repot
+Laravel root `composer.json`-nál ha még nincs, akkor be kell állítani a `endorbithu` repot
 
 ```
 "repositories": [
   {
     "type": "composer",
-    "url": "https://delocalzrt.repo.repman.io"
+    "url": "https://endorbithu.repo.repman.io"
   }
 ]
 ```
@@ -43,7 +43,7 @@ Laravel root `composer.json`-nál ha még nincs, akkor be kell állítani a `del
 Aztán a laravel rootban:
 
 ```
-composer require delocalzrt/datatable
+composer require endorbithu/datatable
 ```
 
 Mivel a package composer.json -jában szerepel a
@@ -52,7 +52,7 @@ Mivel a package composer.json -jában szerepel a
 "extra": {
     "laravel": {
       "providers": [
-        "DelocalZrt\\Datatable\\Providers\\DatatableServiceProvider"
+        "Endorbit\\Datatable\\Providers\\DatatableServiceProvider"
       ]
     }
   }
@@ -72,7 +72,7 @@ Publikáljuk a packaget = alkalmazza a providert és tartalmát:
 php artisan vendor:publish
  Which provider or tag's files would you like to publish?:
   [0 ] Publish files from all providers and tags listed below
-  [1 ] Provider: DelocalZrt\Datatable\Providers\DatatableServiceProvider
+  [1 ] Provider: Endorbit\Datatable\Providers\DatatableServiceProvider
 ```
 
 Végül
@@ -98,7 +98,7 @@ Eloquent modellből vagy sima (asszociatív) tömbből tudunk aktív adattáblá
 
 ### CSV export a háttérben
 Ha az exportálandó mezők (soror * oszlopok száma) nagyobb, mint a config-ban megadott (`config('datatable.csv_in_background_from_fields')`)
-akkor ha a XHR action-ben le van kezelve, háttérben fog a csv generálódni (`\DelocalZrt\Datatable\Jobs\ProcessBigCsvExportToFile`)     
+akkor ha a XHR action-ben le van kezelve, háttérben fog a csv generálódni (`\Endorbit\Datatable\Jobs\ProcessBigCsvExportToFile`)     
 ```
 if(Datatable::hasTriggeredBackgroundCsvGenerating(self::class, __FUNCTION__, $modelForQueryBuilder, $request))
    return back()->with('success', 'A csv fájl generálása folyamatban');

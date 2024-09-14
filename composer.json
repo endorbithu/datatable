@@ -1,5 +1,5 @@
 {
-  "name": "delocalzrt/datatable",
+  "name": "endorbithu/datatable",
   "authors": [
     {
       "name": "Magyar Bertalan",
@@ -12,20 +12,20 @@
   },
   "autoload": {
     "psr-4": {
-      "DelocalZrt\\Datatable\\": "src"
+      "Endorbit\\Datatable\\": "src"
     }
   },
   "extra": {
     "laravel": {
       "providers": [
-        "DelocalZrt\\Datatable\\Providers\\DatatableServiceProvider"
+        "Endorbit\\Datatable\\Providers\\DatatableServiceProvider"
       ]
     }
   },
   "repositories": [
     {
       "type": "composer",
-      "url": "https://delocalzrt.repo.repman.io"
+      "url": "https://endorbithu.repo.repman.io"
     }
   ]
 }
