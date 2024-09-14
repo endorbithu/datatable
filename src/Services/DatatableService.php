@@ -6,13 +6,13 @@
  * Time: 13:35
  */
 
-namespace DelocalZrt\Datatable\Services;
+namespace Endorbit\Datatable\Services;
 
 
-use DelocalZrt\Datatable\Jobs\ProcessBigCsvExportToFile;
+use Endorbit\Datatable\Jobs\ProcessBigCsvExportToFile;
 use Carbon\Carbon;
-use DelocalZrt\Datatable\Contracts\DatatableServiceInterface;
-use DelocalZrt\Datatable\Models\DatatableUser;
+use Endorbit\Datatable\Contracts\DatatableServiceInterface;
+use Endorbit\Datatable\Models\DatatableUser;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Model;

@@ -1,9 +1,9 @@
 <?php
 
-namespace DelocalZrt\Datatable\Services;
+namespace Endorbit\Datatable\Services;
 
 
-use DelocalZrt\Datatable\Contracts\DatatableServiceInterface;
+use Endorbit\Datatable\Contracts\DatatableServiceInterface;
 
 class DatatableServiceSelector
 {

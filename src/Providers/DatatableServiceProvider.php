@@ -1,12 +1,12 @@
 <?php
 
-namespace DelocalZrt\Datatable\Providers;
+namespace Endorbit\Datatable\Providers;
 
-use DelocalZrt\Datatable\Contracts\DatatableServiceInterface;
-use DelocalZrt\Datatable\Contracts\OperationServiceInterface;
-use DelocalZrt\Datatable\Services\DatatableService;
-use DelocalZrt\Datatable\Services\DatatableServiceSelector;
-use DelocalZrt\Datatable\Services\OperationService;
+use Endorbit\Datatable\Contracts\DatatableServiceInterface;
+use Endorbit\Datatable\Contracts\OperationServiceInterface;
+use Endorbit\Datatable\Services\DatatableService;
+use Endorbit\Datatable\Services\DatatableServiceSelector;
+use Endorbit\Datatable\Services\OperationService;
 
 class DatatableServiceProvider extends \Illuminate\Support\ServiceProvider
 {
@@ -46,7 +46,7 @@ class DatatableServiceProvider extends \Illuminate\Support\ServiceProvider
         });
 
         $loader = \Illuminate\Foundation\AliasLoader::getInstance();
-        $loader->alias('Datatable', \DelocalZrt\Datatable\Services\Datatable::class);
+        $loader->alias('Datatable', \Endorbit\Datatable\Services\Datatable::class);
 
         $this->loadViewsFrom(__DIR__ . '/../../views', 'datatable');
 
