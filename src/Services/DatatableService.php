@@ -398,7 +398,6 @@ class DatatableService implements DatatableServiceInterface
                 /** @var Model $model */
                 $model = (new $this->eloquentClass());
 
-
                 if ($this->isPublicMethodOf($model, $field)) {
                     $rel = $model->$field();
 
@@ -413,7 +412,7 @@ class DatatableService implements DatatableServiceInterface
                     }
 
                 } elseif (Schema::hasColumn($model->getTable(), $field)
-                    && (DB::connection()->getDoctrineColumn($model->getTable(), $field)->getType()->getName() == 'boolean')
+                    && (DB::connection()->getSchemaBuilder()->getColumnType($model->getTable(), column: $field) == 'tinyint')
                 ) {
                     $search[$col . 's'] = (['' => 'Összes...', 0 => 'NEM', 1 => 'IGEN']);
                 } elseif (Schema::hasColumn($model->getTable(), $field)) {
